@@ -1,63 +1,36 @@
-#div1 {
-  background-image: url("https://picsum.photos/id/237/200/300");
-  height: 300px;
-  width: 200px;
-  margin: 20px;
+.container {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Center the images vertically */
+    gap: 10px; /* Add some space between the images */
+    margin-top: 20px;
 }
 
-#div2 {
-  background-image: url("https://picsum.photos/seed/picsum/200/300");
-  height: 300px;
-  width: 200px;
-  margin: 20px;
+.image-box {
+    width: 100px;
+    height: 300px;
+    border: 1px solid #ccc;
+    background-size: cover;
+    background-position: center;
+    cursor: grab; /* Change cursor to a "grab" hand */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Make the "Image 1" text visible */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000; /* Add a text shadow for better readability */
 }
 
-#div3 {
-  background-image: url("https://picsum.photos/200/300?grayscale");
-  height: 300px;
-  width: 200px;
-  margin: 20px;
-}
+/* Add specific background images */
+#div1 { background-image: url('image1.jpg'); }
+#div2 { background-image: url('image2.jpg'); }
+#div3 { background-image: url('image3.jpg'); }
+#div4 { background-image: url('image4.jpg'); }
+#div5 { background-image: url('image5.jpg'); }
+#div6 { background-image: url('image6.jpg'); }
 
-#div4 {
-  background-image: url("https://picsum.photos/200/300/");
-  height: 300px;
-  width: 200px;
-  margin: 20px;
-}
-
-#div5 {
-  background-image: url("https://picsum.photos/200/300.jpg");
-  height: 300px;
-  width: 200px;
-  margin: 20px;
-}
-
-#div6 {
-  background-image: url("https://picsum.photos/id/102/200/300");
-  height: 300px;
-  width: 200px;
-  margin: 20px;
-}
-
-div.container {
-  border: 5px solid #555;
-}
-
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.selected {
-  border: 5px solid rgb(0, 195, 255);
-}
-
-p {
-  text-align: center;
-}
-
-button {
-  margin: 20px;
+/* Style for when an element is being dragged */
+.image-box.dragging {
+    opacity: 0.5; /* Make the dragged element semi-transparent */
+    border: 2px dashed #666; /* Change the border style */
 }
